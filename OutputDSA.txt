@@ -1,0 +1,303 @@
+    Welcome to Disk Scheduling Policies
+
+Do you want to input the values? [0/1]: 1
+
+Enter the length of the request queue: 9
+
+Enter the request queue: 
+
+Enter Element 1: 
+12
+
+Enter Element 2: 
+98
+
+Enter Element 3: 
+23
+
+Enter Element 4: 
+67
+
+Enter Element 5: 
+26
+
+Enter Element 6: 
+99
+
+Enter Element 7: 
+7
+
+Enter Element 8:
+45
+
+Enter Element 9:
+89
+
+Enter the current head location:
+34
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 1
+
+                +--------------------------------------+
+                |Output for FCFS Disk Scheduling Policy|
+                +--------------------------------------+
+
+        Head currently at: 34
+
+     Iteration   Current Head    Disk Movement   Total Disk Movement
+------------------------------------------------------------------------
+        1               90              56              56
+        2               120             30              86
+        3               30              90              176
+        4               40              10              186
+        5               115             75              261
+        6               130             15              276
+        7               110             20              296
+        8               80              30              326
+        9               190             110             436
+        10              25              165             601
+------------------------------------------------------------------------
+
+        Total Head Movement: 601
+
+        Order of Processing: 90 -> 120 -> 30 -> 40 -> 115 -> 130 -> 110 -> 80 -> 190 -> 25
+
+        Average Seek Time: 601 / 10 = 60.1
+
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK 
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 2
+
+                +--------------------------------------+
+                |Output for SSTF Disk Scheduling Policy|
+                +--------------------------------------+
+
+        Head currently at: 34
+
+     Iteration   Current Head    Disk Movement   Total Disk Movement
+------------------------------------------------------------------------
+        1               30              4               4
+        2               25              5               9
+        3               40              15              24
+        4               80              40              64
+        5               90              10              74
+        6               110             20              94
+        7               115             5               99
+        8               120             5               104
+        9               130             10              114
+        10              190             60              174
+------------------------------------------------------------------------
+
+        Total Head Movement: 174
+
+        Order of Processing: 30 -> 25 -> 40 -> 80 -> 90 -> 110 -> 115 -> 120 -> 130 -> 190
+
+        Average Seek Time: 174 / 10 = 17.4
+
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 3
+[25, 30][40, 80, 90, 110, 115, 120, 130, 190]
+
+Traverse to the inner track or the outer track?
+ [0] Inner Track
+ [1] Outer Track
+ Your Choice? 0
+
+                +--------------------------------------+
+                |Output for SCAN Disk Scheduling Policy|
+                +--------------------------------------+
+
+        Head currently at: 34
+
+     Iteration   Current Head    Disk Movement   Total Disk Movement
+------------------------------------------------------------------------
+        1               30              4               4
+        2               25              5               9
+        3               0               25              34
+        4               40              40              74
+        5               80              40              114
+        6               90              10              124
+        7               110             20              144
+        8               115             5               149
+        9               120             5               154
+        10              130             10              164
+        11              190             60              224
+------------------------------------------------------------------------
+
+        Total Head Movement: 224
+
+        Order of Processing: 30 -> 25 -> 0 -> 40 -> 80 -> 90 -> 110 -> 115 -> 120 -> 130 -> 190
+
+        Average Seek Time: 224 / 10 = 22.4
+
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 4
+[25, 30][40, 80, 90, 110, 115, 120, 130, 190]
+
+Traverse to the inner track or the outer track?
+ [0] Inner Track
+ [1] Outer Track
+ Your Choice? 0
+
+                +----------------------------------------+
+                |Output for C-SCAN Disk Scheduling Policy|
+                +----------------------------------------+
+
+        Head currently at: 34
+
+     Iteration   Current Head    Disk Movement   Total Disk Movement
+------------------------------------------------------------------------
+        1               30              4               4
+        2               25              5               9
+        3               0               25              34
+        4               199             199             233
+        5               190             9               242
+        6               130             60              302
+        7               120             10              312
+        8               115             5               317
+        9               110             5               322
+        10              90              20              342
+        11              80              10              352
+        12              40              40              392
+------------------------------------------------------------------------
+
+        Total Head Movement: 392
+
+        Order of Processing: 30 -> 25 -> 0 -> 199 -> 190 -> 130 -> 120 -> 115 -> 110 -> 90 -> 80 -> 40
+
+        Average Seek Time: 392 / 10 = 39.2
+
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 5
+[25, 30][40, 80, 90, 110, 115, 120, 130, 190]
+
+Traverse to the inner track or the outer track?
+ [0] Inner Track
+ [1] Outer Track
+ Your Choice? 1
+
+                +--------------------------------------+
+                |Output for LOOK Disk Scheduling Policy|
+                +--------------------------------------+
+
+        Head currently at: 34
+
+     Iteration   Current Head    Disk Movement   Total Disk Movement
+------------------------------------------------------------------------
+        1               40              6               6
+        2               80              40              46
+        3               90              10              56
+        4               110             20              76
+        5               115             5               81
+        6               120             5               86
+        7               130             10              96
+        8               190             60              156
+        9               30              160             316
+        10              25              5               321
+------------------------------------------------------------------------
+
+        Total Head Movement: 321
+
+        Order of Processing: 40 -> 80 -> 90 -> 110 -> 115 -> 120 -> 130 -> 190 -> 30 -> 25
+
+        Average Seek Time: 321 / 10 = 32.1
+
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 6
+[25, 30][40, 80, 90, 110, 115, 120, 130, 190]
+
+Traverse to the inner track or the outer track?
+ [0] Inner Track
+ [1] Outer Track
+ Your Choice? 1
+
+                +----------------------------------------+
+                |Output for C-LOOK Disk Scheduling Policy|
+                +----------------------------------------+
+
+        Head currently at: 34
+
+     Iteration   Current Head    Disk Movement   Total Disk Movement
+------------------------------------------------------------------------
+        1               40              6               6
+        2               80              40              46
+        3               90              10              56
+        4               110             20              76
+        5               115             5               81
+        6               120             5               86
+        7               130             10              96
+        8               190             60              156
+        9               25              165             321
+        10              30              5               326
+------------------------------------------------------------------------
+
+        Total Head Movement: 326
+
+        Order of Processing: 40 -> 80 -> 90 -> 110 -> 115 -> 120 -> 130 -> 190 -> 25 -> 30
+
+        Average Seek Time: 326 / 10 = 32.6
+
+
+
+Enter the policy you want to execute?
+[1] FCFS (First Come First Serve)
+[2] SSTF (Shortest Seek Time First)
+[3] SCAN
+[4] C-SCAN
+[5] LOOK
+[6] C-LOOK
+[7] Exit
+Enter your choice? [1-7]: 7
